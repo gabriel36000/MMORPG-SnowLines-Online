@@ -119,7 +119,7 @@ NavMeshSettings:
     accuratePlacement: 0
     debug:
       m_Flags: 0
-  m_NavMeshData: {fileID: 0}
+  m_NavMeshData: {fileID: 23800000, guid: 061f0e41c2d1390498f351f2670ffc02, type: 2}
 --- !u!1 &311335046
 GameObject:
   m_ObjectHideFlags: 0
@@ -137,7 +137,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!65 &311335047
 BoxCollider:
@@ -401,7 +401,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 1513459594}
   offset: {x: 0, y: -1.5, z: -2}
+  zoomSpeed: 4
+  minZoom: 5
+  maxZoom: 15
   pitch: 2
+  horizontalSpeed: 100
 --- !u!1 &1513459589
 GameObject:
   m_ObjectHideFlags: 0
@@ -416,6 +420,8 @@ GameObject:
   - component: {fileID: 1513459591}
   - component: {fileID: 1513459590}
   - component: {fileID: 1513459597}
+  - component: {fileID: 1513459598}
+  - component: {fileID: 1513459595}
   - component: {fileID: 1513459596}
   m_Layer: 0
   m_Name: Player
@@ -507,13 +513,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1513459589}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -15.858528, y: 2.58, z: -1.173735}
+  m_LocalPosition: {x: -15.89, y: 2.59, z: -1.173735}
   m_LocalScale: {x: 1, y: 2.7261631, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1513459596
+--- !u!114 &1513459595
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -522,9 +528,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 1513459589}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2c8aa9b3ac6d344429c095c743952dee, type: 3}
+  m_Script: {fileID: 11500000, guid: 544d734a0b4f12f46b338a67f492d07b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!136 &1513459596
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1513459589}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 1
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!195 &1513459597
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -547,3 +567,15 @@ NavMeshAgent:
   m_BaseOffset: 0.5
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &1513459598
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1513459589}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bbc8ee4d924b264c99e4434b00a528e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
