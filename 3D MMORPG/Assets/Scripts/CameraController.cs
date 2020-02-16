@@ -8,6 +8,7 @@ public class CameraController : MonoBehaviour
 
     public Vector3 offset;
 
+
     public float zoomSpeed = 4f;
     public float minZoom = 5f;
     public float maxZoom = 15f;
@@ -15,9 +16,14 @@ public class CameraController : MonoBehaviour
     public float pitch = 2f;
 
     public float horizontalSpeed = 100f;
+    public float verticalSpeed = 100f;
 
     private float currentZoom = 10f;
     private float currentHorizontal = 2f;
+    private float currentVertical = 2f;
+   
+ 
+
 
     void Update()
     {
@@ -28,7 +34,8 @@ public class CameraController : MonoBehaviour
         {
             currentHorizontal += Input.GetAxis("Mouse X") * horizontalSpeed * Time.deltaTime;
         }
-        
+
+
     }
     void LateUpdate()
     {
