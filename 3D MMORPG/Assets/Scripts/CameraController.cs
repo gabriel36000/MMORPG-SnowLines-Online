@@ -38,7 +38,7 @@ public class CameraController : MonoBehaviour
         }
         
         if (Input.GetButton("Mouse Y")) {
-            print (currentVertical);
+            
             
             currentVertical -= Input.GetAxis("Mouse Y") * verticalSpeed * Time.deltaTime;
             
